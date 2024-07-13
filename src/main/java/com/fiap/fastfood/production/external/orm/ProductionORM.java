@@ -20,6 +20,7 @@ import java.time.LocalDateTime;
 public class ProductionORM {
     @Id
     private String id;
+    private String orderId;
     private Status status;
     @CreatedDate
     private LocalDateTime createdAt;

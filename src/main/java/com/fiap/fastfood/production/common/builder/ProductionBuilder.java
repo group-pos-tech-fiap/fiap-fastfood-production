@@ -8,18 +8,20 @@ public class ProductionBuilder {
     public static Production fromOrmToDomain(ProductionORM orm) {
         return Production.builder()
                 .id(orm.getId())
+                .orderId(orm.getOrderId())
                 .createdAt(orm.getCreatedAt())
                 .updatedAt(orm.getUpdatedAt())
                 .status(orm.getStatus())
                 .build();
     }
 
-    public static ProductionORM fromDomainToOrm(Production order) {
+    public static ProductionORM fromDomainToOrm(Production production) {
         return ProductionORM.builder()
-                .id(order.getId())
-                .createdAt(order.getCreatedAt())
-                .updatedAt(order.getUpdatedAt())
-                .status(order.getStatus())
+                .id(production.getId())
+                .orderId(production.getOrderId())
+                .createdAt(production.getCreatedAt())
+                .updatedAt(production.getUpdatedAt())
+                .status(production.getStatus())
                 .build();
     }
 }
