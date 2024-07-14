@@ -11,7 +11,8 @@ public class ProductionUseCaseImpl implements ProductionUseCase {
     private final ProductionGateway productionGateway;
     private final OrderClient orderClient;
 
-    public ProductionUseCaseImpl(ProductionGateway productionGateway, OrderClient orderClient) {
+    public ProductionUseCaseImpl(ProductionGateway productionGateway,
+                                 OrderClient orderClient) {
         this.productionGateway = productionGateway;
         this.orderClient = orderClient;
     }

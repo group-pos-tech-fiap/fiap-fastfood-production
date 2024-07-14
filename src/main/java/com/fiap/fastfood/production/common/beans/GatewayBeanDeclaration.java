@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class GatewayBeanDeclaration {
 
     @Bean
-    public ProductionGateway orderGateway(SpringDataMongoProductionRepository repository) {
+    public ProductionGateway productionGateway(SpringDataMongoProductionRepository repository) {
         return new ProductionGatewayImpl(repository);
     }
 }
